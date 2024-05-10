@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJANGO</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="instalacion.html">Instalación</a></li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                </ul>
+
+            </nav>
+        </header>
+        <section>
+            <h2>Primer paso: Intalar python</h2>
+
+        </section>
+        <section>
+            <h2>Sistemas operativos compatibles</h2>
+            <li>Windows (Windows 7 y posteriores)</li>
+            <li>macOS (macOS 10.9 y posteriores)</li>
+            <li>Linux (varias distribuciones, como Ubuntu, Fedora y CentOS)</li>
+        </section>
+        <section>
+            <h2>Recomendacion de requisitos mínimos de hardware</h2>
+            <li><b>RAM: </b>Al menos 4 GB de RAM, pero es preferible más, especialmente cuando trabajes con grandes
+                conjuntos
+                de datos o aplicaciones que consuman muchos recursos.</li>
+            <br>
+            <li><b>Almacenamiento: </b>Al menos 5 GB de espacio libre en disco para la propia instalación de Python y
+                espacio
+                adicional para las bibliotecas, paquetes y archivos de proyecto que pienses utilizar.</li>
+        </section>
+
+        <h2>Tutorial de instalacion</h2>
+
+        <button class="accordion">Para Windows</button>
+        <div class="panel">
+            <a href="https://www.python.org/downloads/windows/">Descarga el instalador</a>
+            <p>Ejecuta el instalador</p>
+            <p>Marca la casilla «Añadir Python 3.x al PATH» antes de proceder a la instalación. Esto asegurará que
+                Python se añada a la variable PATH de tu sistema, facilitando la ejecución de Python desde el símbolo
+                del sistema.</p>
+        </div>
+
+        <button class="accordion">Para macOS</button>
+        <div class="panel">
+            <p>macOS es un sistema operativo desarrollado por Apple.</p>
+        </div>
+
+        <button class="accordion">Para Linux</button>
+        <div class="panel">
+            <p>Linux es un sistema operativo de código abierto.</p>
+        </div>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    /* Alternar entre agregar y quitar la clase "active"*/
+                    this.classList.toggle("active");
+
+                    /* Alternar entre ocultar y mostrar el panel activo */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+
+</body>
+
+</html>
