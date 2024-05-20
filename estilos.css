@@ -9,6 +9,9 @@
 }
 
 .menu-container {
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background: linear-gradient(to right,
             #0f4b33 10%,
             #087a4b 35%,
@@ -17,7 +20,9 @@
             #0f4b33 75%);
     background-size: 200%;
     animation: shine 6s linear infinite;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 100px;
 }
 
 @keyframes shine {
@@ -30,19 +35,19 @@
     }
 }
 
+.django-logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 .menu {
     padding: 10px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.django-logo {
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .menu-icon {
@@ -60,20 +65,24 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .menu-items a {
-    padding: 23px 100px;
+    flex: 1 0 auto;
+    padding: 15px;
+    margin: 5px;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: monospace;
     transition: opacity 250ms linear, transform 550ms linear;
 }
+
 
 .menu-items a:hover {
     opacity: 1;
@@ -85,57 +94,121 @@
     transform: scale(0.95);
 }
 
-@media only screen and (max-width: 600px) {
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-items {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu-icon {
-        display: block;
-        margin-left: auto;
-    }
-
-    #menu-toggle:checked+.menu-icon+.menu-items {
-        display: flex;
-    }
-}
-
 .container {
-    padding: 18px;
-    margin: 0px;
-    position: fixed;
-    left: 0;
-    z-index: -1;
-    background: linear-gradient(45deg, #0bbd73, #00ce56);
-    background-size: 400% 400%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+
 }
 
-.titulo {
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(192, 4, 4, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
+.slider-frame {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto 0;
+    overflow: hidden;
+    max-width: 800px;
 }
 
-.titulo h1 {
-    color: #4b0f3e;
+.slider-frame .slider-image {
+    margin-top: 64px;
+    /*margen del nav*/
+    width: 100%;
+    height: 400px;
+    max-height: 500px;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: rgb(0, 0, 0);
+    text-shadow: -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
     font-size: 30px;
-    margin-bottom: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h2 {
+
+
+.feature {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature h2 {
     color: #a10980;
+    text-shadow: -1px -1px 0 rgb(228, 152, 252),
+        1px -1px 0 rgb(228, 152, 252),
+        -1px 1px 0 rgb(228, 152, 252),
+        1px 1px 0 rgb(228, 152, 252);
     font-size: 20px;
     margin-bottom: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 50px;
+}
+
+.feature p{
+    color: #0a0a0a;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 5px;
 }
