@@ -43,45 +43,23 @@
 
         <h2>Tutorial de instalacion</h2>
 
-        <button class="accordion">Para Windows</button>
-        <div class="panel">
-            <a href="https://www.python.org/downloads/windows/">Descarga el instalador</a>
-            <p>Ejecuta el instalador</p>
-            <p>Marca la casilla «Añadir Python 3.x al PATH» antes de proceder a la instalación. Esto asegurará que
-                Python se añada a la variable PATH de tu sistema, facilitando la ejecución de Python desde el símbolo
-                del sistema.</p>
-        </div>
+        <label>Para Windows</label>
 
-        <button class="accordion">Para macOS</button>
-        <div class="panel">
-            <p>macOS es un sistema operativo desarrollado por Apple.</p>
-        </div>
+        <p>Descarga el instalador<a href="https://www.python.org/downloads/windows/"> aqui</a></p>
+        <p>Ejecuta el instalador</p>
+        <p>Marca la casilla «Añadir Python 3.x al PATH» antes de proceder a la instalación. Esto asegurará que
+            Python se añada a la variable PATH de tu sistema, facilitando la ejecución de Python desde el símbolo
+            del sistema.</p>
+        <p>Verificar la instalacion</p>
+        <code>python --version</code>
 
-        <button class="accordion">Para Linux</button>
-        <div class="panel">
-            <p>Linux es un sistema operativo de código abierto.</p>
-        </div>
 
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
 
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function () {
-                    /* Alternar entre agregar y quitar la clase "active"*/
-                    this.classList.toggle("active");
 
-                    /* Alternar entre ocultar y mostrar el panel activo */
-                    var panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    }
-                });
-            }
-        </script>
+
+
 
 </body>
+
 
 </html>

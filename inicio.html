@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJANGO</title>
+    <link rel="website icon" type="png" href="logo.png">
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <nav>
-                <ul class="menu">
+    <div class="head">
+        <div class="menu-container">
+            <nav class="menu">
+                <div class="django-logo">django</div>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="menu-items">
                     <li><a href="inicio.html">Inicio</a></li>
                     <li><a href="instalacion.html">Instalación</a></li>
-                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="tutorial.html">Práctica</a></li>
                 </ul>
-
             </nav>
-            <h1>DJANGO</h1>
-            <p>Conozcamos al framework web de Python</p>
-        </header>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h1>Conozcamos al framework de Python</h1>
+        </div>
         <section>
             <h2>¿Qué es Django?</h2>
             <p>Django es un software que puede utilizar para desarrollar aplicaciones web de forma rápida y eficiente.
@@ -39,44 +45,44 @@
                 que puedes concentrarte en escribir tu aplicación sin necesidad de reinventar la rueda. Es gratuito y de
                 código abierto.</p>
         </section>
-        <section>
+        <div class="carac">
             <h2>Principales características</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Rápido</h3>
-                    <p>Django fue diseñado para ayudar a los desarrolladores a llevar las aplicaciones desde el concepto
-                        hasta su finalización lo más rápido posible.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Completamente cargado</h3>
-                    <p>Django incluye docenas de extras que puedes usar para manejar tareas comunes de desarrollo web.
-                        Django se encarga de la autenticación de usuarios, la administración de contenidos, los mapas
-                        del sitio, las fuentes RSS y muchas más tareas, desde el primer momento.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Seguro</h3>
-                    <p>Django se toma en serio la seguridad y ayuda a los desarrolladores a evitar muchos errores de
-                        seguridad comunes, como la inyección SQL, secuencias de comandos entre sitios, falsificación de
-                        solicitudes entre sitios y clickjacking. Su sistema de autenticación de usuarios proporciona una
-                        forma segura de administrar cuentas de usuario y contraseñas.</p>
-                </div>
-                <div class="card">
-                    <h3>Escalable</h3>
-                    <p>Algunos de los sitios más concurridos del planeta utilizan la capacidad de Django para escalar de
-                        forma rápida y flexible para satisfacer las demandas de tráfico más intensas.</p>
-                </div>
 
-                <div class="card">
-                    <h3>Increíblemente versátil</h3>
-                    <p>Empresas, organizaciones y gobiernos han utilizado Django para construir todo tipo de cosas,
-                        desde sistemas de gestión de contenidos hasta redes sociales y plataformas informáticas
-                        científicas.</p>
-                </div>
+            <div class="text">
+                <h3>Rápido</h3>
+                <p>Django fue diseñado para ayudar a los desarrolladores a llevar las aplicaciones desde el concepto
+                    hasta su finalización lo más rápido posible.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Completamente cargado</h3>
+                <p>Django incluye docenas de extras que puedes usar para manejar tareas comunes de desarrollo web.
+                    Django se encarga de la autenticación de usuarios, la administración de contenidos, los mapas
+                    del sitio, las fuentes RSS y muchas más tareas, desde el primer momento.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Seguro</h3>
+                <p>Django se toma en serio la seguridad y ayuda a los desarrolladores a evitar muchos errores de
+                    seguridad comunes, como la inyección SQL, secuencias de comandos entre sitios, falsificación de
+                    solicitudes entre sitios y clickjacking. Su sistema de autenticación de usuarios proporciona una
+                    forma segura de administrar cuentas de usuario y contraseñas.</p>
+            </div>
+            <div class="card">
+                <h3>Escalable</h3>
+                <p>Algunos de los sitios más concurridos del planeta utilizan la capacidad de Django para escalar de
+                    forma rápida y flexible para satisfacer las demandas de tráfico más intensas.</p>
             </div>
 
-        </section>
+            <div class="card">
+                <h3>Increíblemente versátil</h3>
+                <p>Empresas, organizaciones y gobiernos han utilizado Django para construir todo tipo de cosas,
+                    desde sistemas de gestión de contenidos hasta redes sociales y plataformas informáticas
+                    científicas.</p>
+            </div>
+
+
+        </div>
         <section>
             <h2>Recursos útiles</h2>
             <ul>
@@ -86,9 +92,21 @@
             </ul>
         </section>
         <footer>
-            <p>© 2024 - JHASMIN CATACORA TICONA</p>
+
         </footer>
     </div>
 </body>
 
 </html>
+<script>
+    window.addEventListener('deviceorientation', handleOrientation, true);
+
+    function handleOrientation(event) {
+        const body = document.querySelector('body');
+        // Mapea los valores de inclinación del dispositivo a la posición del fondo
+        const xOffset = event.gamma / 90 * 50; // Rango de -50 a 50
+        const yOffset = event.beta / 90 * 50; // Rango de -50 a 50
+        // Aplica la posición del fondo
+        body.style.backgroundPositionX = `${xOffset}%`;
+        body.style.backgroundPositionY = `${yOffset}%`;
+    }</script>

@@ -1,249 +1,190 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+.head {
+    width: 100%;
 }
 
-header {
-    text-align: center;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-}
-
-
-section {
-
-    margin-bottom: 20px;
-}
-
-h1,
-h2,
-h3 {
-    color: #333;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.card {
-    width: calc(50% - 10px);
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-
-.card p {
-    margin-bottom: 0;
-}
-
-ul {
-
-
-    list-style: none;
-    padding: 0;
-}
-
-a {
-
-    color: #007bff;
-    text-decoration: none;
-}
-
-
-footer {
-
-    text-align: center;
-    margin-top: 50px;
+.menu-container {
+    background: linear-gradient(to right,
+            #0f4b33 10%,
+            #087a4b 35%,
+            #01925d 50%,
+            #117a4f 65%,
+            #0f4b33 75%);
+    background-size: 200%;
+    animation: shine 6s linear infinite;
+    position: relative;
 }
 
 .menu {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
     display: flex;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu li:last-child {
-    margin-right: 0;
-}
-
-.menu li a {
-    color: #333;
-    text-decoration: none;
-}
-
-.menu li a:hover {
-    text-decoration: underline;
-}
-
-sectio section {
-    margin-bottom: 20px;
-}
-
-h1,
-h2,
-h3 {
-    color: #333;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
-.card {
-    width: calc(30% - 10px);
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.toggle-btn {
-
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.toggle-btn:hover {
-    background-color: #0056b3;
-}
-
-.content {
-    display: none;
-}
-
-.content.active {
-    display: block;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.toggle-content .content {
-    display: none;
-}
-
-.toggle-content.active .content {
-    display: block;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-/* Estilos básicos para el acordeón */
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-  }
-  
-  /* Agregar un ícono de "más" a los botones del acordeón */
-  .accordion:after {
-    content: '\002B'; /* Símbolo de más */
-    color: #777;
+.django-logo {
+    font-size: 50px;
     font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  /* Cambiar el ícono de "más" por "menos" cuando se expande el panel */
-  .active:after {
-    content: "\2212"; /* Símbolo de menos */
-  }
-  
-  /* Estilo para el panel del acordeón */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
+    color: white;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-items li {
+    margin: 0 10px;
+}
+
+.menu-items a {
+    padding: 23px 100px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: opacity 250ms linear, transform 550ms linear;
+}
+
+.menu-items a:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu:hover a:not(:hover) {
+    opacity: 0.25;
+    transform: scale(0.95);
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-items li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    #menu-toggle:checked+.menu-icon+.menu-items {
+        display: flex;
+    }
+}
+
+@keyframes shine {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+
+.text {
+    max-width: 600px;
+    padding: 35px 45px;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.text h3 {                                            
+    font-size: 50px;
+}
+
+.text p {
+    padding: 15px 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita el desplazamiento horizontal y vertical */
+}
+
+.container {
+    padding: 18px;
+    margin: 0px;
+    position: fixed;
+    left: 0;
+    z-index: -1; /* Coloca el fondo detrás de todo */
+    background: linear-gradient(45deg, #00b894, #00cec9); /* Fondo verde */
+    background-size: 400% 400%; /* Tamaño del fondo (puede ajustarse según sea necesario) */
+    animation: gradientAnimation 15s ease infinite; /* Animación del fondo */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Inicia la animación en el centro */
+    }
+    50% {
+        background-position: 100% 50%; /* Mueve el fondo hacia la derecha */
+    }
+    100% {
+        background-position: 0% 50%; /* Vuelve al centro */
+    }
+}
+
+.block {
+    background-color: #f0f5f9; /* Color de fondo */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 600px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.block h1 {
+    color: #4b0f3e; /* Color de texto */
+    font-size: 30px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Animación */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+   
+}
