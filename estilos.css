@@ -20,6 +20,16 @@
     position: relative;
 }
 
+@keyframes shine {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 200% center;
+    }
+}
+
 .menu {
     padding: 10px;
     position: relative;
@@ -53,10 +63,6 @@
     width: 100%;
 }
 
-.menu-items li {
-    margin: 0 10px;
-}
-
 .menu-items a {
     padding: 23px 100px;
     color: #ffffff;
@@ -64,6 +70,7 @@
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     transition: opacity 250ms linear, transform 550ms linear;
 }
@@ -90,11 +97,6 @@
         width: 100%;
     }
 
-    .menu-items li {
-        width: 100%;
-        text-align: center;
-    }
-
     .menu-icon {
         display: block;
         margin-left: auto;
@@ -105,87 +107,35 @@
     }
 }
 
-@keyframes shine {
-    from {
-        background-position: 0% center;
-    }
-    to {
-        background-position: 200% center;
-    }
-}
-
-
-
-.text {
-    max-width: 600px;
-    padding: 35px 45px;
-    width: 90%;
-    max-width: 800px;
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-.text h3 {                                            
-    font-size: 50px;
-}
-
-.text p {
-    padding: 15px 0;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Evita el desplazamiento horizontal y vertical */
-}
-
 .container {
     padding: 18px;
     margin: 0px;
     position: fixed;
     left: 0;
-    z-index: -1; /* Coloca el fondo detrás de todo */
-    background: linear-gradient(45deg, #00b894, #00cec9); /* Fondo verde */
-    background-size: 400% 400%; /* Tamaño del fondo (puede ajustarse según sea necesario) */
-    animation: gradientAnimation 15s ease infinite; /* Animación del fondo */
+    z-index: -1;
+    background: linear-gradient(45deg, #0bbd73, #00ce56);
+    background-size: 400% 400%;
 }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%; /* Inicia la animación en el centro */
-    }
-    50% {
-        background-position: 100% 50%; /* Mueve el fondo hacia la derecha */
-    }
-    100% {
-        background-position: 0% 50%; /* Vuelve al centro */
-    }
-}
-
-.block {
-    background-color: #f0f5f9; /* Color de fondo */
+.titulo {
     padding: 30px;
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center; /* Centrar el contenido */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    max-width: 600px; /* Ancho máximo */
-    margin: 0 auto; /* Centrar horizontalmente */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(192, 4, 4, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.block h1 {
-    color: #4b0f3e; /* Color de texto */
-    font-size: 30px; /* Tamaño de fuente */
-    margin-bottom: 10px; /* Espacio inferior */
+.titulo h1 {
+    color: #4b0f3e;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Animación */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-   
+h2 {
+    color: #a10980;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-

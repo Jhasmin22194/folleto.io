@@ -17,15 +17,15 @@
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <ul class="menu-items">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="instalacion.html">Instalación</a></li>
-                    <li><a href="tutorial.html">Práctica</a></li>
+                    <a href="index.html">Inicio</a>
+                   <a href="instalacion.html">Instalación</a>
+                   <a href="tutorial.html">Práctica</a>
                 </ul>
             </nav>
         </div>
     </div>
     <div class="container">
-        <div class="block">
+        <div class="titulo">
             <h1>Conozcamos el framework de Python</h1>
         </div>
         <section>
@@ -98,15 +98,3 @@
 </body>
 
 </html>
-<script>
-    window.addEventListener('deviceorientation', handleOrientation, true);
-
-    function handleOrientation(event) {
-        const body = document.querySelector('body');
-        // Mapea los valores de inclinación del dispositivo a la posición del fondo
-        const xOffset = event.gamma / 90 * 50; // Rango de -50 a 50
-        const yOffset = event.beta / 90 * 50; // Rango de -50 a 50
-        // Aplica la posición del fondo
-        body.style.backgroundPositionX = `${xOffset}%`;
-        body.style.backgroundPositionY = `${yOffset}%`;
-    }</script>
